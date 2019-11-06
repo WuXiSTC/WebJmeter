@@ -6,5 +6,5 @@ ENV JMETER_SRC http://mirrors.tuna.tsinghua.edu.cn/apache//jmeter/binaries/apach
 
 RUN wget -O ${JMETER_FILE} ${JMETER_SRC} && \
     mkdir ${JMETER_HOME} && \
-    tar -xzvf ${JMETER_FILE} ${JMETER_HOME} && \
+    tar -xzvf ${JMETER_FILE} -C ${JMETER_HOME} && \
     rm ${JMETER_FILE}
