@@ -8,4 +8,6 @@ ENV JMETER_SRC http://mirrors.tuna.tsinghua.edu.cn/apache//jmeter/binaries/${JME
 RUN wget -O ${JMETER_FILE} ${JMETER_SRC} && \
     tar -xzvf ${JMETER_FILE} -C ./ && \
     rm ${JMETER_FILE} && \
-    mv ${JMETER_VERSION} ${JMETER_HOME}
+    mv ./${JMETER_VERSION} ${JMETER_HOME}
+
+ADD webswing.config.json ./webswing.config
